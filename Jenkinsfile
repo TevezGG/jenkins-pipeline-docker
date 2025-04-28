@@ -7,6 +7,7 @@ pipeline {
     stage("build") {
       steps {
         sh """
+          echo $HOME
           docker build -t hello_there .
           echo "Building image"
         """
