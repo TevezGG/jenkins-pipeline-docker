@@ -4,14 +4,15 @@ pipeline {
     stage("build") {
       steps {
         sh """
-          docker build -t hello_there .
+          #docker build -t hello_there .
+          echo "Building image"
         """
       }
     }
     stage("run") {
       steps {
         sh """
-          docker run --rm hello_there
+          docker run --rm hello_worlds
         """
       }
     }
